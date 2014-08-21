@@ -1,0 +1,188 @@
+@CHARSET "UTF-8";
+
+
+.scrollable-chart-panel {
+
+	max-height: 300px;
+	overflow-x: auto;
+}
+
+.popover-left {
+display: block;
+position: relative;
+float:left;
+width: 90%;
+margin: 0 10px 10px;
+}
+
+.popover-right {
+display: block;
+float:right;
+position: relative;
+width: 90%;
+margin: 0 10px 10px 100px;
+}
+
+.messages .pull-right {
+float:right;	
+}
+
+a {
+ cursor: pointer;
+}
+
+.logo {
+    background-image: url('../../static/landingpage/img/logo/logo_phirea_gray.png');
+    background-size: 100% auto;
+    width: 30px;
+    height: 30px;
+    margin-top: 14px;
+    display: inline-block;
+    float: left;
+}
+
+.logo_small {
+    background-image: url('../../static/landingpage/img/logo/logo_phirea_gray.png');
+    background-size: 100% auto;
+    
+    width: 115px;
+    height: 39px;
+    margin-top: 15px;
+    display: block;
+}
+
+/****
+ * angular animations
+ ****/
+
+.repeat-animation.ng-enter, 
+.repeat-animation.ng-leave, 
+.repeat-animation.ng-move {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  position:relative;
+}
+
+.repeat-animation.ng-enter {
+  left:-10px;
+  opacity:0;
+}
+.repeat-animation.ng-enter.ng-enter-active {
+  left:0;
+  opacity:1;
+}
+
+.repeat-animation.ng-leave {
+  left:0;
+  opacity:1;
+}
+.repeat-animation.ng-leave.ng-leave-active {
+  left:-10px;
+  opacity:0;
+}
+
+.repeat-animation.ng-move {
+  opacity:0.5;
+}
+.repeat-animation.ng-move.ng-move-active {
+  opacity:1;
+}
+
+
+/*GROWL*/
+
+.growl {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    float: right;
+    width: 300px;
+    z-index: 9999999;
+}
+
+
+.chart {
+    max-width: 320px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+
+.number-display-chart {
+    max-width: 350px;
+    
+    /*background: orange;*/
+    background: rgba(19, 124, 173, 0.84);
+    color: white;
+    width: 200px;
+    
+    text-align: center;
+    padding-top: 63px;
+    padding-bottom: 63px;
+    height: 250px;
+}
+
+.number-display-chart .number-display {
+    font-size: 64px;
+}
+
+
+
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Northward tooltips */
+.d3-tip.n:after {
+  content: "\25BC";
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+  text-align: center;
+}
+
+/* Eastward tooltips */
+.d3-tip.e:after {
+  content: "\25C0";
+  margin: -4px 0 0 0;
+  top: 50%;
+  left: -8px;
+}
+
+/* Southward tooltips */
+.d3-tip.s:after {
+  content: "\25B2";
+  margin: 0 0 1px 0;
+  top: -8px;
+  left: 0;
+  text-align: center;
+}
+
+/* Westward tooltips */
+.d3-tip.w:after {
+  content: "\25B6";
+  margin: -4px 0 0 -1px;
+  top: 50%;
+  left: 100%;
+}
